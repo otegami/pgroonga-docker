@@ -30,6 +30,23 @@ FROM postgres:12-alpine
 COPY --from=0 /usr/lib/libmsgpack-c.so.? /usr/lib/
 COPY --from=0 /usr/lib/liblz4.so.? /usr/lib/
 COPY --from=0 /usr/lib/libzstd.so.? /usr/lib/
+COPY --from=0 /usr/lib/libarrow.so.???? /usr/lib/
+COPY --from=0 /usr/lib/libbrotlidec.so.? /usr/lib
+COPY --from=0 /usr/lib/libbrotlienc.so.? /usr/lib
+COPY --from=0 /usr/lib/libbz2.so.? /usr/lib
+COPY --from=0 /usr/lib/libc.musl-x86_64.so.? /usr/lib
+COPY --from=0 /usr/lib/libgcc_s.so.? /usr/lib
+COPY --from=0 /usr/lib/libglog.so.? /usr/lib
+COPY --from=0 /usr/lib/liblz4.so.? /usr/lib
+COPY --from=0 /usr/lib/libprotobuf.so.?? /usr/lib
+COPY --from=0 /usr/lib/libre2.so.?? /usr/lib
+COPY --from=0 /usr/lib/libsnappy.so.? /usr/lib
+COPY --from=0 /usr/lib/libstdc++.so.? /usr/lib
+COPY --from=0 /usr/lib/libutf8proc.so.? /usr/lib
+COPY --from=0 /usr/lib/libz.so.? /usr/lib
+COPY --from=0 /usr/lib/libzstd.so.? /usr/lib
+COPY --from=0 /usr/lib/libabsl_str_format_internal.so.* /usr/lib
+
 # copy MeCab files
 COPY --from=0 /usr/local/etc/mecabrc /usr/local/etc/
 COPY --from=0 /usr/local/lib/libmecab.so.? /usr/local/lib/
